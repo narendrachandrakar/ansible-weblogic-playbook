@@ -1,4 +1,8 @@
 **Weblogic12c Admin Server, Node Manager and Managed Server in AWS with Ansible provisioner**
+Centos 7:
+sudo yun install-y  unzip, vim, git
+sudo yum install epel-release
+sudo yum install -y ansible
 
 More Details Read : note.txt
 
@@ -8,7 +12,6 @@ Ansible playbook for deploy and create a WebLogic 12c Domain
 
 Ansible 2.8
 
-Centos ( Target ) and RHEL ( Ansible host ) machine
 
 Oracle Weblogic 12c
 
