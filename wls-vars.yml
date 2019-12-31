@@ -12,5 +12,6 @@ nodemanager_username: 'manager'
 weblogic_admin: 'weblogic'
 admin_server_name: 'AdminServer'
 server_hostname: '{{ ansible_fqdn }}'
-app_deplyment_flag: true
+# when do you want to deploy the app app_deplyment_flag should be true
+app_deplyment_flag: false
 weblogic_install: false
