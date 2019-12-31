@@ -1,5 +1,7 @@
 **Weblogic12c Admin Server, Node Manager and Managed Server in AWS with Ansible provisioner**
 
+More Details Read : note.txt
+
 Ansible playbook for deploy and create a WebLogic 12c Domain 
 
 **Prerequisites:**
@@ -14,7 +16,7 @@ Oracle JDK 1.8.66
 
 **Configuration**
 
-Place Weblogic distributive to roles/fmw-software/files/fmw_12.1.3.0.0_wls.jar
+Place Weblogic distributive to roles/fmw-software/files/fmw_12.2.1.0.0_wls
 
 Place JDK distributive to roles/linux-jdk/files/jdk-8u66-linux-x64.tar.gz
 
@@ -28,11 +30,12 @@ jdk_folder: '{{ oracle_base }}/jdk1.8.0_66'
 
 **# fmw installer**
 
-mw_installer: 'fmw_12.1.3.0.0_wls.jar'
+mw_installer: 'fmw_12.2.1.0.0_wls.jar'
 
 **Installation**
 
-$ ansible-playbook -i hosts playbook.yml -e ansible_python_interpreter=auto -v
+Run the playbook: ansible-playbook -vv -i hosts playbook.yml
+Deploy application: ansible-playbook -vv -i hosts playbook.yml --tags deploy
 
 Access Weblogic web interface at http://x.x.x.x:7001/console using weblogic/welcome1 credentials.
 
